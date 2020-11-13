@@ -13,7 +13,6 @@ import {
 import { TouchableOpacity, Text, FlatList, TextInput } from 'react-native'
 import Svg, { Path } from 'react-native-svg';
 import { styles } from './MyCarScreen.css'
-import { FooterMain } from '../../assets/component/footer/FooterMain';
 
 export const MyCarScreen = ({ navigation }) => {
 
@@ -89,7 +88,6 @@ export const MyCarScreen = ({ navigation }) => {
                     ListHeaderComponent={<SearchHeader />}
                 />
             </View>
-            <FooterMain navigation={navigation} />
         </Container>
     );
 }

@@ -13,7 +13,6 @@ import {
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { TouchableOpacity, Text, Image } from 'react-native'
 import { styles } from './MapScreen.css'
-import { FooterMain } from '../../assets/component/footer/FooterMain';
 
 export const MapScreen = ({ navigation }) => {
     const items = [
@@ -59,7 +58,6 @@ export const MapScreen = ({ navigation }) => {
                     <Text style={styles.infoText}>12.11.2020 в 12:22</Text>
                 </View>
             </View>
-            <FooterMain navigation={navigation} />
         </Container>
     );
 }

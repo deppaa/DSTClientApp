@@ -13,7 +13,6 @@ import {
 import { TouchableOpacity, Text, Image } from 'react-native'
 import Svg, { Path } from 'react-native-svg';
 import { styles } from './CarScreen.css'
-import { FooterMain } from '../../assets/component/footer/FooterMain'
 
 
 export const CarScreen = ({ navigation }) => {
@@ -47,12 +46,12 @@ export const CarScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.row}>
-                    <TouchableOpacity style={styles.buttonLeft}>
+                    <TouchableOpacity style={styles.buttonLeft} onPress={() => navigation.navigate('MyMessageOnCar', { showLeft: true })}>
                         <Image style={styles.bg} source={require('../../assets/image/fb_car_list.png')} />
                         <Text style={styles.topTitle}>Обращения {"\n"}по машине</Text>
                         <View style={styles.messageWrapper}><View style={styles.messageIcon} /><Text style={styles.message}>Сообщение</Text></View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonRight}>
+                    <TouchableOpacity style={styles.buttonRight} onPress={() => navigation.navigate('NewMessageOnCar', { showLeft: true })} >
                         <Image style={styles.bg} source={require('../../assets/image/card_new_feedback_new.png')} />
                         <Text style={styles.bottomTitle}>Новое {"\n"}обращение</Text>
                     </TouchableOpacity>
@@ -62,7 +61,7 @@ export const CarScreen = ({ navigation }) => {
                         <Image style={styles.bg} source={require('../../assets/image/carPasport.png')} />
                         <Text style={styles.bottomTitle}>Паспорт {"\n"}машины</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonRight}>
+                    <TouchableOpacity style={styles.buttonRight} onPress={() => navigation.navigate('FilseScreen')}>
                         <Image style={styles.bg} source={require('../../assets/image/file.png')} />
                         <Text style={styles.bottomTitle}>Файлы</Text>
                     </TouchableOpacity>
@@ -78,7 +77,6 @@ export const CarScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </View>
-            <FooterMain navigation={navigation} />
         </Container>
     )
 }
