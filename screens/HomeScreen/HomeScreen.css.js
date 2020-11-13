@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 10,
         flex: 1,
+        backgroundColor: '#eeeeee'
     },
     controllerWrapper: {
         flex: 1 / 6,

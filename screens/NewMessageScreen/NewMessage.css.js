@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 16,
         paddingVertical: 10,
         flex: 1,
+        backgroundColor: '#eeeeee'
     },
     addBtn: {
         width: 50,
