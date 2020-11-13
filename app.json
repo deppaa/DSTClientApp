@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "dstclientapp",
-    "slug": "dstclientapp",
+    "name": "dstclientApp",
+    "slug": "dstclientApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "ru.dst.clientApp",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "ru.dst.clientApp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
