@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 6,
         paddingVertical: 10,
         flex: 1,
+        backgroundColor: '#eeeeee'
     },
     row: {
         flex: 1,
@@ -25,71 +26,85 @@ export const styles = StyleSheet.create({
         backgroundColor: '#d8d8d8',
         borderRadius: 4,
         marginLeft: 4,
-        paddingHorizontal: 19,
-        paddingVertical: 16
+        overflow: 'hidden',
     },
-    buttonCarMessage: {
-        flex: 1 / 2,
-        backgroundColor: '#ffba00',
-        borderRadius: 4,
-        marginRight: 4,
-        paddingHorizontal: 19,
-        paddingVertical: 16
-    },
-    buttonMapNewMessage: {
-        flex: 1 / 2,
-        backgroundColor: '#d8d8d8',
-        borderRadius: 4,
-        marginLeft: 4,
-        paddingHorizontal: 19,
-        paddingVertical: 16
-    },
-    buttonCarPassport: {
+    buttonLeft: {
         flex: 1,
         backgroundColor: '#ffba00',
         borderRadius: 4,
         marginRight: 4,
-        paddingHorizontal: 19,
-        paddingVertical: 16
+        overflow: 'hidden'
     },
-    buttonCarWork: {
+    buttonRight: {
         flex: 1,
-        backgroundColor: '#d8d8d8',
-        borderRadius: 4,
-        marginRight: 4,
-        marginLeft: 4,
-        paddingHorizontal: 19,
-        paddingVertical: 16
-    },
-    buttonCarTO: {
-        flex: 1,
-        backgroundColor: '#d8d8d8',
+        backgroundColor: '#ffba00',
         borderRadius: 4,
         marginLeft: 4,
-        paddingHorizontal: 19,
-        paddingVertical: 16
+        overflow: 'hidden'
     },
     bottomTitle: {
         marginTop: 'auto',
-        fontSize: 16,
+        fontSize: 13,
         fontWeight: '700',
-        color: '#fff'
+        color: '#fff',
+        position: 'absolute',
+        bottom: 19,
+        left: 16,
     },
     bottomTitleBlack: {
         marginTop: 'auto',
-        fontSize: 16,
+        fontSize: 13,
         fontWeight: '700',
-        color: '#000'
+        color: '#000',
+        position: 'absolute',
+        bottom: 19,
+        left: 16,
     },
     topTitle: {
         fontSize: 16,
         fontWeight: '700',
-        color: '#fff'
+        color: '#fff',
+        position: 'absolute',
+        top: 19,
+        left: 16,
     },
     subTitle: {
         fontSize: 14,
         color: '#fff',
         fontWeight: '300',
-        marginTop: 7,
+        position: 'absolute',
+        top: 38,
+        left: 16,
     },
+    messageWrapper: {
+        position: 'absolute',
+        left: 16,
+        bottom: 19,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    message: {
+        fontSize: 12,
+        color: '#fff'
+    },
+    messageIcon: {
+        width: 10,
+        height: 10,
+        backgroundColor: '#00f6ff',
+        borderRadius: 25,
+        marginRight: 10
+    },
+    bg: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        resizeMode: 'cover'
+    },
+    mapIcon: {
+        position: 'absolute',
+        top: 14,
+        left: 18,
+    }
 })

@@ -15,8 +15,9 @@ import {
 import { TouchableOpacity, Text, FlatList } from 'react-native'
 import Svg, { Path } from 'react-native-svg';
 import { styles } from './MyMessage.css'
+import { FooterMain } from '../../assets/component/footer/FooterMain';
 
-export const MyMessage = () => {
+export const MyMessage = ({ navigation }) => {
 
     const DATA = [
         {
@@ -131,9 +132,9 @@ export const MyMessage = () => {
 
     return (
         <Container>
-            <Header style={{ backgroundColor: "#ffba00" }} androidStatusBarColor="#fb9c2a">
+            <Header noLeft style={{ backgroundColor: "#ffba00" }} androidStatusBarColor="#fb9c2a">
                 <Left>
-                    <Button transparent>
+                    <Button transparent onPress={() => navigation.goBack()}>
                         <Icon name='arrow-back' />
                     </Button>
                 </Left>
@@ -151,25 +152,7 @@ export const MyMessage = () => {
                     showsHorizontalScrollIndicator={false}
                 />
             </View>
-            <Footer footerDefaultBg="#FFF" tabActiveBgColo="#000">
-                <FooterTab>
-                    <Button>
-                        <Icon name="apps" />
-                    </Button>
-                    <Button>
-                        <Icon name="camera" />
-                    </Button>
-                    <Button>
-                        <Icon name="camera" />
-                    </Button>
-                    <Button>
-                        <Icon name="navigate" />
-                    </Button>
-                    <Button>
-                        <Icon name="person" />
-                    </Button>
-                </FooterTab>
-            </Footer>
+            <FooterMain navigation={navigation} />
         </Container>
     );
 }

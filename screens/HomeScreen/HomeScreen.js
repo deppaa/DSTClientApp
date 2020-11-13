@@ -6,7 +6,7 @@ import {
 import { TouchableOpacity, Text, Image } from 'react-native'
 import { styles } from './HomeScreen.css'
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ navigation }) => {
     return (
         <Container>
             <Header noLeft style={{ backgroundColor: "#ffba00" }} androidStatusBarColor="#fb9c2a">
@@ -18,17 +18,17 @@ export const HomeScreen = () => {
             </Header>
             <View style={styles.container}>
                 <View style={styles.functionsWrapper}>
-                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper}>
+                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('MyCarScreen')}>
                         <Image style={styles.functionButtonImage} source={require('../../assets/image/card_technic.png')} />
                         <Text style={styles.buttonTitleTop}>Мои машины</Text>
                         <Text style={styles.buttonTextBottom}>5 машин</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper}>
+                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('MyMessage')}>
                         <Image style={styles.functionButtonImage} source={require('../../assets/image/card_feedBack_list.png')} />
                         <Text style={styles.buttonTitleTop}>Мои обращения</Text>
                         <Text style={styles.buttonTextBottom}><View style={styles.circlMessage} />  Сообщение</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper}>
+                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('NewMessage')}>
                         <Image style={styles.functionButtonImage} source={require('../../assets/image/card_new_feedback.png')} />
                         <Text style={styles.buttonTitleBottom}>Новое обращение</Text>
                     </TouchableOpacity>
