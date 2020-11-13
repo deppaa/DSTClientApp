@@ -16,16 +16,17 @@ import {
 } from 'native-base';
 import { TouchableOpacity, Text, Image } from 'react-native'
 import { styles } from './NewMessage.css'
-import { FooterMain } from '../../assets/component/footer/FooterMain';
 
-export const NewMessage = ({ navigation }) => {
+export const NewMessage = ({ route, navigation }) => {
     const [focusTheme, setFocusTheme] = useState(false);
     const [focusNumber, setFocusNumber] = useState(false);
     const [focusComent, setFocusComent] = useState(false);
 
+    const { showLeft } = route.params
+
     return (
         <Container>
-            <Header noLeft style={{ backgroundColor: "#ffba00" }} androidStatusBarColor="#fb9c2a">
+            <Header noLeft={!showLeft} style={{ backgroundColor: "#ffba00" }} androidStatusBarColor="#fb9c2a">
                 <Left>
                     <Button transparent onPress={() => navigation.goBack()}>
                         <Icon name='arrow-back' />
@@ -69,7 +70,6 @@ export const NewMessage = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </View>
-            <FooterMain navigation={navigation} />
         </Container>
     );
 }
