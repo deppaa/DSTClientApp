@@ -23,12 +23,12 @@ export const HomeScreen = ({ navigation }) => {
                         <Text style={styles.buttonTitleTop}>Мои машины</Text>
                         <Text style={styles.buttonTextBottom}>5 машин</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('MyMessage')}>
+                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('MyMessage', { showLeft: false })}>
                         <Image style={styles.functionButtonImage} source={require('../../assets/image/card_feedBack_list.png')} />
                         <Text style={styles.buttonTitleTop}>Мои обращения</Text>
                         <Text style={styles.buttonTextBottom}><View style={styles.circlMessage} />  Сообщение</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('NewMessage')}>
+                    <TouchableOpacity activeOpacity={0.7} style={styles.functionWrapper} onPress={() => navigation.navigate('NewMessage', { showLeft: false })}>
                         <Image style={styles.functionButtonImage} source={require('../../assets/image/card_new_feedback.png')} />
                         <Text style={styles.buttonTitleBottom}>Новое обращение</Text>
                     </TouchableOpacity>
@@ -38,7 +38,7 @@ export const HomeScreen = ({ navigation }) => {
                         <Text style={styles.buttonCallTitle}>Звонок{"\n"}на завод</Text>
                         <Image style={styles.controllerButtonIcon} source={require('../../assets/image/call.png')} />
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} style={styles.controllerButtonSettings}>
+                    <TouchableOpacity activeOpacity={0.7} style={styles.controllerButtonSettings} onPress={() => navigation.navigate('SettingScreen')} >
                         <Text style={styles.buttonSettingsTitle}>Настройки</Text>
                         <Image style={styles.controllerButtonIcon} source={require('../../assets/image/setting.png')} />
                     </TouchableOpacity>
