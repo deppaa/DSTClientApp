@@ -11,7 +11,7 @@ import {
     View,
 } from 'native-base';
 import { TouchableOpacity, Text, FlatList } from 'react-native'
-import { styles } from './FilseScreen.css'
+import { styles } from './FileScreen.css'
 
 export const FilseScreen = ({ navigation }) => {
 
