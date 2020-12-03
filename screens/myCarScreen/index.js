@@ -13,22 +13,9 @@ import {
 import { TouchableOpacity, Text, FlatList, TextInput } from 'react-native'
 import Svg, { Path } from 'react-native-svg';
 import styles from './styles'
-import { useDispatch, useSelector } from 'react-redux';
-import { selectCars } from '../../store/carScreen/actions';
 
 export default MyCarScreen = ({ navigation }) => {
-
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(selectCars())
-    }, [dispatch])
-
-    const DATA = useSelector(({ carList }) => {
-        return carList.data
-    })
-
-    /* const DATA = [
+    const DATA = [
         {
             id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
             title: '2201',
@@ -44,16 +31,7 @@ export default MyCarScreen = ({ navigation }) => {
             title: '2131',
             name: 'Бульдозер D10.0101',
         },
-    ]; */
-
-    const Done = ({ color, height, width }) => {
-        return (
-            <Svg height={height} width={width} fill={color}>
-                <Path d="M0 0h24v24H0z" fill="none"></Path>
-                <Path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"></Path>
-            </Svg>
-        )
-    }
+    ];
 
     const SearchHeader = () => {
         return (

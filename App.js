@@ -2,7 +2,6 @@ import React from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Root } from "native-base";
-import { Provider } from 'react-redux';
 import store from './store/store'
 import NavContainer from './navigation';
 import { Auth } from './screens';
